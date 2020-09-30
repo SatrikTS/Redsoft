@@ -13,3 +13,4 @@ new Vue({
 import './assets/scss/fonts.scss'
 import './assets/scss/custom.scss'
 import './assets/scss/variables.scss';
+import './assets/scss/preloader.scss';

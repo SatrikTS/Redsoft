@@ -10,6 +10,9 @@
           </div>
       </div>
       <CartMsg v-if="productAdd" :data="productAdd"/>
+      <div class="preloader" v-if="preloader">
+
+      </div>
   </div>
 </template>
 
@@ -27,7 +30,8 @@ export default {
     data() {
         return {
             productList: productList.productList,
-            productAdd: null
+            productAdd: null,
+            preloader: false
         }
     },
     computed: {
@@ -46,9 +50,11 @@ export default {
     },
     watch: {
         productStatus(data) {
-            this.productAdd = data
+            this.productAdd = data;
+            this.preloader = true;
             setTimeout(() => {
-                this.productAdd = null
+                this.productAdd = null;
+                this.preloader = false;
             }, 1500)
         }
     }

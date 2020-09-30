@@ -19,6 +19,7 @@ export default {
 <style lang="scss" scoped>
     .cart-msg {
         position: fixed;
+        z-index: 10;
         top: 20px;
         right: 20px;
         width: 220px;
